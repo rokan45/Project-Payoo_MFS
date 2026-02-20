@@ -19,6 +19,16 @@ function setBalance(value){
    Balance.innerText=value;
 }
 
+//add money select validation
+
+function getValueFromInput(elementId) {
+    const element = document.getElementById(elementId);
+    if (element) {
+        return element.value;
+    }
+    return "";
+}
+
 //Add Money page landing
 document.getElementById('add-money-page').addEventListener('click',function(){
       window.location.replace("addMoney.html");
@@ -39,6 +49,12 @@ document.getElementById('transfer-page').addEventListener('click',function(){
 //Bonous Page
 document.getElementById('bonous-page').addEventListener('click',function(){
       window.location.replace("getBonous.html");
+   
+})
+
+//Pay Bill Page
+document.getElementById('pay-bill-page').addEventListener('click',function(){
+      window.location.replace("payBill.html");
    
 })
 

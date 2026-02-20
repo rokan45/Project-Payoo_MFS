@@ -1,4 +1,13 @@
 document.getElementById('add-money-btn').addEventListener('click', function () {
+    //select a bank validate
+    const getBank=getValueFromInput("add-bank");
+    if(getBank=="Select Bank"){
+        alert("Please Select a bank");
+        return;
+    }
+
+
+
     //get the bankACCnumber and validate
     const bankNumber = document.getElementById('bank-number');
     const getBankNumber = bankNumber.value;
