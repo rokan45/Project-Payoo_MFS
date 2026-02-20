@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
-    <title>Add Money</title>
+    <title>Send Money</title>
 
     <!-- Taiwind and DaisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
@@ -68,39 +68,28 @@
     </section>
 
     <section class="cashout w-11/12 mx-auto py-5">
-        <h2 class="text-[18px] font-semibold mb-5">Add Money</h2>
+        <h2 class="text-[18px] font-semibold mb-5">Transfer Money</h2>
         <div class="card bg-base-100 w-full shrink-0 mx-auto shadow-sm rounded-2xl ">
             <div class="card-body">
                 <fieldset class="fieldset">
-                    <label class="label text-[16px] font-medium text-[#080808]">Select A Bank</label>
-
-                    <select id="add-bank" class="input rounded-4xl w-full bg-[#F4F5F7]">
-                        <option value="" disabled selected>Select Your Bank</option>
-                        <option value="Brac">Brac</option>
-                        <option value="AB">AB</option>
-                        <option value="Rupali">Rupali</option>
-                        <option value="Sonali">Sonali</option>
-                        <option value="Janata">Janata</option>
-                        <option value="City Bank">City Bank</option>
-                    </select>
-                    <label class="label text-[16px] font-medium text-[#080808]">Bank Account Number</label>
-                    <input id="bank-number" type="email" maxlength="7" minlength="7"
-                        class="input rounded-4xl bg-[#F4F5F7] w-full" placeholder="Enter 11 digit account number" />
-                    <label class="label text-[16px] font-medium text-[#080808]">Amount to Add</label>
-                    <input id="deposit" type="email" maxlength="11" minlength="11"
-                        class="input rounded-4xl bg-[#F4F5F7] w-full" placeholder="Add Amount to withdraw" />
-                    <label class="label text-[16px] font-medium text-[#080808]">4 Digit Pin</label>
-                    <input id="deposit-pin" type="password" maxlength="4" class="input rounded-4xl bg-[#F4F5F7] w-full"
-                        placeholder="Enter 4 digit pin number" />
-                    <button id="add-money-btn"
-                        class="btn btn-primary mt-4 rounded-4xl w-full h-[45px] text-[20px] font-semibold">Add Money</button>
+                    <label class="label text-[16px] font-medium text-[#080808]">User Account Number</label>
+                    <input id="user-number" type="email" maxlength="11" minlength="11"
+                        class="input rounded-4xl w-full bg-[#F4F5F7]" placeholder="Enter 11 digit number"
+                        value="01711111111" />
+                    <label class="label text-[16px] font-medium text-[#080808]">Amount</label>
+                    <input id="amount" type="email" maxlength="11" minlength="11"
+                        class="input rounded-4xl bg-[#F4F5F7] w-full" placeholder="Enter amount to transfer" />
+                    <label class="label text-[16px] font-medium text-[#080808]">Pin Number</label>
+                    <input id="user-pin" type="password" maxlength="4" class="input rounded-4xl bg-[#F4F5F7] w-full"
+                        placeholder="Enter 4 Digit Pin" />
+                    <button id="send-money-btn"
+                        class="btn btn-primary mt-4 rounded-4xl w-full h-[45px] text-[20px] font-semibold">Send Now</button>
                 </fieldset>
             </div>
     </section>
 
     <script src="/script/commonFunction.js"></script>
-    <script src="/script/cashout.js"></script>
-    <script src="/script/add-money.js"></script>
+    <script src="/script/sendMoney.js"></script>
 </body>
 
 </html>
