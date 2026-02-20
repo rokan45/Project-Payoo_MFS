@@ -19,21 +19,26 @@ function setBalance(value){
    Balance.innerText=value;
 }
 
-//Cashout page landing
-document.getElementById('cash-out-btn').addEventListener('click',function(){
-      window.location.replace("cashoutPage.html");
-   
-})
-
 //Add Money page landing
 document.getElementById('add-money-page').addEventListener('click',function(){
       window.location.replace("addMoney.html");
    
 })
 
-//send money page
-document.getElementById('send-money-btn').addEventListener('click',function(){
+//Cashout page landing
+document.getElementById('cash-out-page').addEventListener('click',function(){
+    window.location.replace("cashoutPage.html");
+    
+})
+
+//Transfer money page
+document.getElementById('transfer-page').addEventListener('click',function(){
       window.location.replace("sendMoney.html");
+   
+})
+//Bonous Page
+document.getElementById('bonous-page').addEventListener('click',function(){
+      window.location.replace("getBonous.html");
    
 })
 
