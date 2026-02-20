@@ -2,7 +2,7 @@ document.getElementById('cashout-btn').addEventListener('click', function () {
     //get the agent number and validate
     const agentNumber = document.getElementById('agent-number');
     const getNumber = agentNumber.value;
-    if(getNumber !==11){
+    if(getNumber.length !==11){
         alert('Invalid Number!')
         return;
     }
@@ -12,12 +12,11 @@ document.getElementById('cashout-btn').addEventListener('click', function () {
     const getAmount = withDrawAmount.value;
 
     //get the current balance
-    const balanceElement = document.getElementById('balance');
-    const getCurrentBalance = balanceElement.innerText;
+    const currentBalance = getBalance();
 
 
     //calculate new balance
-    const newBalance = Number(getCurrentBalance) - Number(getAmount);
+    const newBalance = currentBalance - getAmount;
     console.log(newBalance);
 
     if (newBalance < 0) {
@@ -30,7 +29,7 @@ document.getElementById('cashout-btn').addEventListener('click', function () {
     if (pin === "1122") {
         //true---show an alert and set balance
         alert('Cashout Successful');
-        balanceElement.innerHTML=newBalance;
+        setBalance(newBalance);
     } else {
         //false--alrt and return
         alert('Invalid pin');
