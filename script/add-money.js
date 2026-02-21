@@ -39,7 +39,7 @@ document.getElementById('add-money-btn').addEventListener('click', function () {
     const pin = pinNumber.value;
     if (pin === "1122") {
         //true---show an alert and set balance
-        alert('Money Added Succesfully');
+        alert(`Money added successfully from ${getBank} Bank at ${new Date()}`);
         setBalance(newBalance);
     } else {
         //false--alrt and return
