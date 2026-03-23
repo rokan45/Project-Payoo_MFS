@@ -12,7 +12,6 @@ document.getElementById('login-btn').addEventListener('click',function(){
     //match the pin and number
     if(getNumber=='01711111111' && getPin=="1122"){
          //--if match go to homepage
-        alert("Go to homepage");
         window.location.replace("homepage.html");
     }
     else{
