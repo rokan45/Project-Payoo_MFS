@@ -1,4 +1,3 @@
-// commonFunction.js
 
 // User defined function to get element value easily
 function getValue(id) {
@@ -29,11 +28,11 @@ function getValueFromInput(elementId) {
     return "";
 }
 
-// Ensure the DOM is fully loaded before attaching event listeners
+// Ensure the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Add Money page landing
     const addMoneyPageBtn = document.getElementById('add-money-page');
-    if (addMoneyPageBtn) { // Always good to check if the element exists before adding a listener
+    if (addMoneyPageBtn) {
         addMoneyPageBtn.addEventListener('click', function() {
             window.location.replace("addMoney.html");
         });
